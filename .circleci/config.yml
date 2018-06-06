@@ -1,0 +1,9 @@
+version: 2
+jobs:
+   build:
+     docker:
+       - image: circleci/Python:3.6.5
+     steps:
+       - checkout
+       - run: python helloWorld.py
+       - run: echo "echo statement"
