@@ -7,3 +7,11 @@ jobs:
        - checkout
        - run: python helloWorld.py
        - run: echo "echo statement"
+workflows:
+  version: 2
+  deploy:
+    jobs:
+      - build:
+          filters:
+            branches:
+              only: master
